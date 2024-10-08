@@ -1,0 +1,33 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{decorations.markings} %Used to draw arrow head on dashed line
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+\tikzstyle{line} = [draw, -triangle 45]
+\tikzstyle{-->}=[draw,dashed,decoration={markings,mark=at position 0.99 with {\arrow[scale=2]{angle 90}}},postaction={decorate}, shorten >=0.4pt]
+
+%Defines a model compartment
+\tikzstyle{block} = [rectangle, draw, fill=white, text=black, 
+    minimum width=3em, text centered, node distance=4cm, rounded corners, minimum height=3em]
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (S) {$S$};
+    \node [block] at (3,0) (E) {$E$};
+    \node [block] at (6,0) (I) {$I$};
+    \node [block] at (9,0) (R) {$R$};
+    \node (dS) [below of=S,node distance=2cm, coordinate] {S};
+    \node (dE) [below of=E,node distance=2cm, coordinate] {E};
+    \node (dI) [below of=I,node distance=2cm, coordinate] {I};
+    \node (dR) [below of=R,node distance=2cm, coordinate] {R};
+    \node (bS) [left of=S,node distance=2cm, coordinate] {S};
+    % Draw edges
+    \path [line] (S) to node {$\beta I/N$} (E);
+    \path [line] (E) to node {$\delta$} (I);
+    \path [line] (I) to node {$\gamma$} (R);
+    \path [line] (S) to node {$\mu$} (dS);
+    \path [line] (E) to node {$\mu$} (dE);
+    \path [line] (I) to node {$\mu$} (dI);
+    \path [line] (R) to node {$\mu$} (dR);
+    \path [line] (bS) to node {$\mu$} (S);
+\end{tikzpicture}
+\end{document}
