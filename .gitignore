@@ -9,3 +9,4 @@
 Data/*.csv
 *.zip
 *shp*
+*.npy
