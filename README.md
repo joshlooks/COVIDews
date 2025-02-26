@@ -11,7 +11,7 @@ The `data_processing.ipynb` notebook contains pre-processing code to process the
 The `results_LTLA.ipynb` and `results_NHS.ipynb` notebooks contain most of the final results used in the paper (with some supplementary results also included in the `results_LTLA_supplementary.ipynb` notebook). All results can be found in the `Figures` and `Results` directories.
 
 ## Simulation/Theoretical analysis
-Code to run the simulations can be found in `simulation_cluster.py` and `sim.sbatch` (note that these were run on a high-performance computing cluster) and to produce the plots can all be found in the `simulations_aggregation_cluster.ipynb` notebook.
+Code to run the simulations can be found in `simulation_cluster.py` and `sim.sbatch` (note that these were run on a high-performance computing cluster) and to produce the plots can all be found in the `simulations_aggregation_cluster_relative.ipynb` notebook.
 
 ## Further figures
 Further figures are produced through the `intro_plots.ipynb`, `methods_diagram.ipynb` and `simulations_additional.ipynb` notebooks.
