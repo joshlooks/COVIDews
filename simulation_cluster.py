@@ -45,7 +45,6 @@ def gillespie_seir(N, beta_func, delta, gamma, mu, initial_infected, initial_exp
         dt = np.random.exponential(1 / total_rate)
         t += dt
         ind += 1
-        100
         # Determine which event occurs
         rand = np.random.rand() * total_rate
         
