@@ -10,3 +10,4 @@ Data/*.csv
 *.zip
 *shp*
 *.npy
+scratch*
